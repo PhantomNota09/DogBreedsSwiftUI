@@ -8,6 +8,26 @@
 import SwiftUI
 
 struct DogImageView: View {
+    let breedName: String
+    
+    var body: some View {
+        VStack {
+            UIKitImageView(breedName: breedName)
+        }
+        .navigationTitle(breedName.capitalized)
+    }
+}
+
+#Preview {
+    NavigationStack {
+        DogImageView(breedName: "husky")
+    }
+}
+
+/*
+import SwiftUI
+
+struct DogImageView: View {
     
     let breedName: String
     @State private var viewModel: DogImageViewModel
@@ -43,4 +63,4 @@ struct DogImageView: View {
         DogImageView(breedName: "husky")
     }
 }
-
+*/
